@@ -47,6 +47,8 @@ crossorigin="anonymous">
 <!-- //Current date @ top of page -->
     <p id="currentDay"></p>
 
+    <p id="currentTime"></p>
+
 </header>
 
     
@@ -66,15 +68,16 @@ crossorigin="anonymous">
 
         <tbody>
 
-              <p id="timeBlock">
+              <p>
 
-                  <tr>
+                  <tr id="timeBlock1">
                       <th scope="row" id="eightAm">8:00 AM</th>
 
-                      <td><input type ="text" placeholder="Your next task here..." class = "taskFont"></td>
+                      <td><input type ="text" class = "taskFont" id = "8"></td>
 
-                      <td><input type="submit" value = 'Save'id = "8"></td> 
+                      <td><input type="submit" value = 'Save'></td> 
                   </tr>
+
                   <tr>
                       <th scope="row" id="nineAm">9:00 AM</th>
 
@@ -82,6 +85,7 @@ crossorigin="anonymous">
 
                       <td><input type="submit" value = 'Save'></td> 
                   </tr>
+
                   <tr>
                       <th scope="row" id="tenAm">10:00 AM</th>
 
@@ -89,6 +93,7 @@ crossorigin="anonymous">
 
                       <td> <input type="submit" value = 'Save' id = "saveButton10"></td>
                   </tr>
+
                   <tr>
                       <th scope="row" id="elevenAm">11:00 AM</th>
 

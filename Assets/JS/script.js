@@ -12,11 +12,15 @@ var fiveAfternoon = document.getElementById("17");
 var currentTime = moment();
 var hourNow = moment("h");
 
-var colorChange= document.getElementById("timeBlock").innerHTML = Date();
+// var colorChange= document.getElementById("timeBlock").innerHTML = Date();
+
 var tenSave = document.getElementById("saveButton10");
 
 var today = moment();
     $("#currentDay").text(today.format("MMM Do, YYYY"));
+
+var time = moment();
+    $("#currentTime").text(time.format("h:mm:ss"));
 
 var militTime = moment().format("HH");
 console.log(militTime)
@@ -33,29 +37,23 @@ function displayColors() {
         var timeBlock = document.getElementById(i);
         console.log((timeBlock.id))
 
-        if (militTime > parseInt(timeBlock.id))
-        {timeBlock.classList.add("past")} 
-
-        else if (militTime == parseInt(timeBlock.id)) 
-        {console.log("present")} 
-
-        else if (militTime < parseInt(timeBlock.id)) 
-        {console.log("future")}
-
+        if (militTime > 9)
+        {
+            document.getElementById("eightAm").style.backgroundColor="red";
+            document.getElementById("nineAm").style.backgroundColor="red";
+            document.getElementById("tenAm").style.backgroundColor="red";
+            document.getElementById("elevenAm").style.backgroundColor="red";
+            document.getElementById("twelvePm").style.backgroundColor="red";
+            document.getElementById("onePm").style.backgroundColor="red";
+            document.getElementById("twoPm").style.backgroundColor="red";
+            document.getElementById("threePm").style.backgroundColor="red";
+            document.getElementById("fourPm").style.backgroundColor="red";
+            document.getElementById("fivePm").style.backgroundColor="red";
+            }
     }
-   
 }
 
 tenSave.addEventListener("click", displayColors())
-
-function displayTimeOnPage (){
-    eightMorning.textContent = today.format("h:mm:ss");
-    nineMorning.textContent = currentTime;
-    tenMorning.textContent = currentTime;
-}
-
-displayTimeOnPage();
-
 
 
 eightMorning.addEventListener("click", function() { sessionStorage. setItem('clicked', 'true'); })
@@ -74,13 +72,34 @@ eightMorning.addEventListener("click", function() {console.log("future")} )
 
 
 // function backgroundColorEdit(){
-//         if (hourNow == currentTime){
-//             document.getElementById("timeBlock").style.backgroundColor = "#ff0000";
-//         }else if (hourNow < currentTime){
-//             document.getElementsByClassName("timeBlock").style.backgroundColor = "#d3d3d3";
-//         }else 
+//     if (militTime == currentTime){
+//         document.getElementById("timeBlock").style.backgroundColor = "yellow";
+//         }
+//     else if (militTime < currentTime){
+//             document.getElementById("timeBlock").style.backgroundColor = "red";
+//         }
+//     else 
 //         {
-//             document.getElementsByClassName("timeBlock").style.backgroundColor = "#90ee90";
+//             document.getElementById("timeBlock").style.backgroundColor = "green";
 //         }
 // }
 // backgroundColorEdit();
+
+ // else if (militTime == parseInt(timeBlock.id)) 
+        // {
+        //     document.getElementById("timeBlock2").style.backgroundColor = "yellow";
+        //     }
+
+        // else  (militTime < parseInt(timeBlock.id)) 
+        // {
+        //     document.getElementById("timeBlock").style.backgroundColor = "green";
+        // }
+
+        // function displayTimeOnPage (){
+            //     eightAm.textContent = today.format("h:mm:ss");
+            //     nineMorning.textContent = currentTime;
+            //     tenMorning.textContent = currentTime;
+            // }
+            
+            // displayTimeOnPage();
+            
