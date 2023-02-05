@@ -2,122 +2,147 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="Assets/CSS/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <title>Work Day Scheduler</title>
-  </head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <body>
+<link
+rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+<link
+rel="stylesheet"
+href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+crossorigin="anonymous"/>
+<link
+href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+rel="stylesheet"/>
+<link rel="stylesheet" href="Assets/CSS/style.css" />
 
+<script
+src="https://code.jquery.com/jquery-3.5.1.min.js"
+integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+crossorigin="anonymous">
+</script>
 
-    <!-- Top portion of page -->
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"> 
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+</script>
 
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+<title>Project 5 Work Day Scheduler</title>
+</head>
 
-      <!-- //Current date display -->
-      <p id="currentDay"></p>
+<body>
 
-      <!-- <p id="currentTimeDisplay" class="lead"></p> -->
-    </header>
+<!-- HEADER -->
+
+<header class="jumbotron">
+<!-- Title of App -->
+    <h1 class="display-3">Work Day Scheduler</h1>
+
+ <!-- Tagline    -->
+    <p>A simple calendar app for scheduling your work day</p>
+
+<!-- //Current date @ top of page -->
+    <p id="currentDay"></p>
+
+</header>
 
     
+<!-- BODY -->
 
-    <div class="container">
-      <table class="table">
+
+
+    <table class="table">
         
         <thead>
-          <tr>
-            <th scope="col">Start Time</th>
-            <th scope="col">Task Description</th>
-            <th scope="col">Save task?</th>
-          </tr>
+              <tr>
+                  <th scope="col">Start Time</th>
+                  <th scope="col">What are you accomplishing?</th>
+                  <th scope="col">Save Me!</th>
+              </tr>
         </thead>
 
         <tbody>
-          <p id="timeBlock"></p>
-          <tr>
-            <th scope="row"><div id="eightAm">8:00 AM</div></th>
-            <td><input type ="text"></td>
-            <td><input type="submit" value = 'Save'></td> 
-          </tr>
 
-          <tr>
-            <th scope="row" id="nineAm">9:00 AM</th>
-            <td><input type ="text"></td>
-            <td><input type="submit" value = 'Save'></td> 
-          </tr>
+              <p id="timeBlock">
 
-          <tr>
-            <th scope="row" id="tenAm">10:00 AM</th>
-            <td><input type ="text"></td>
-            <td> <input type="submit" value = 'Save'></td>
-          </tr>
+                  <tr>
+                      <th scope="row" id="eightAm">8:00 AM</th>
 
-          <tr>
-            <th scope="row" id="elevenAm">11:00 AM</th>
-            <td><input type ="text" ></td>
-            <td> <input type="submit" value = 'Save'></td>
-          </tr>
+                      <td><input type ="text" placeholder="Your next task here..." class = "taskFont"></td>
 
-          <tr>
-            <th scope="row">12:00 PM</th>
-            <td><input type ="text"></td>
-            <td> <input type="submit" value = 'Save'></td>
-          </tr>
+                      <td><input type="submit" value = 'Save'id = "8"></td> 
+                  </tr>
+                  <tr>
+                      <th scope="row" id="nineAm">9:00 AM</th>
 
-          <tr>
-            <th scope="row">1:00 PM</th>
-            <td><input type ="text"></td>
-            <td> <input type="submit" value = 'Save'></td>
-          </tr>
+                      <td><input type ="text" class = "taskFont" id = "9"></td>
 
-          <tr>
-            <th scope="row">2:00 PM</th>
-            <td><input type ="text"></td>
-            <td> <input type="submit" value = 'Save'></td>
-          </tr>
+                      <td><input type="submit" value = 'Save'></td> 
+                  </tr>
+                  <tr>
+                      <th scope="row" id="tenAm">10:00 AM</th>
 
-          <tr>
-            <th scope="row">3:00 PM</th>
-            <td><input type ="text"></td>
-            <td> <input type="submit" value = 'Save'></td>
-          </tr>
+                      <td><input type ="text" class = "taskFont" id = "10"></td>
 
-          <tr>
-            <th scope="row">4:00 PM</th>
-            <td><input type ="text"></td>
-            <td> <input type="submit" value = 'Save'></td>
-          </tr>
+                      <td> <input type="submit" value = 'Save' id = "saveButton10"></td>
+                  </tr>
+                  <tr>
+                      <th scope="row" id="elevenAm">11:00 AM</th>
 
+                      <td><input type ="text" class = "taskFont" id = "11"></td>
+
+                      <td> <input type="submit" value = 'Save'></td>
+                  </tr>
+
+                  <tr>
+                      <th scope="row" id="twelvePm">12:00 PM</th>
+
+                      <td><input type ="text" class = "taskFont" id = "12"></td>
+
+                      <td> <input type="submit" value = 'Save'></td>
+                  </tr>
+                  <tr>
+                      <th scope="row" id="onePm">1:00 PM</th>
+
+                      <td><input type ="text" class = "taskFont" id = "13"></td>
+
+                      <td> <input type="submit" value = 'Save'></td>
+                  </tr>
+                  <tr>
+                      <th scope="row" id="twoPm">2:00 PM</th>
+
+                      <td><input type ="text" class = "taskFont" id = "14"></td>
+
+                      <td> <input type="submit" value = 'Save'></td>
+                  </tr>
+                  <tr>
+                      <th scope="row" id="threePm">3:00 PM</th>
+
+                      <td><input type ="text" class = "taskFont" id = "15"></td>
+
+                      <td> <input type="submit" value = 'Save'></td>
+                  </tr>
+                  <tr>
+                      <th scope="row" id="fourPm">4:00 PM</th>
+
+                      <td><input type ="text" class = "taskFont" id = "16"></td>
+
+                      <td> <input type="submit" value = 'Save'></td>
+                  </tr>
+                  <tr>
+                      <th scope="row" id="fivePm">5:00 PM</th>
+
+                      <td><input type ="text" class = "taskFont" id = "17"></td>
+
+                      <td> <input type="submit" value = 'Save'></td>
+                  </tr>
+              </p>
+        
         </tbody>
       </table>
-    </div>
-
     <script src="./Assets/JS/script.js"></script>
   </body>
 </html>
