@@ -2,14 +2,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  background-color: lightslategray;
+  background-color: rgb(99, 214, 246);
 }
 
 textarea{
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: #ffffff;
   border-left: 1px solid black;
   padding: 10px;
 }
@@ -17,10 +17,20 @@ textarea{
 
 .jumbotron {
   text-align: center;
+  font-size:100px;
+  text-decoration: underline;
   background-color: transparent;
-  color: black;
+  color: rgb(7, 244, 7);
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 5px solid rgb(37, 14, 241);
+}
+
+.medtron {
+  text-align: center;
+  font-size:25px;
+  font-weight: bolder;
+  background-color: transparent;
+  color: rgb(237, 224, 131);
 }
 
 .description{

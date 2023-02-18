@@ -37,17 +37,20 @@ crossorigin="anonymous">
 
 <!-- HEADER -->
 
-<header class="jumbotron">
+<!-- class="jumbotron" -->
+<header>
 <!-- Title of App -->
-    <h1 class="display-3">Work Day Scheduler</h1>
+    <h1 class="jumbotron">Task Tapper</h1>
 
  <!-- Tagline    -->
-    <p>A simple calendar app for scheduling your work day</p>
+    <p class="medtron">List out tasks and tap them out!</p>
 
 <!-- //Current date @ top of page -->
-    <p id="currentDay"></p>
+    <p class="medtron" id="currentDay"></p>
 
-    <p id="currentTime"></p>
+<!-- //Current time @ top of page -->
+    <p class="medtron" id="currentTime"></p>
+
 
 </header>
 
@@ -55,99 +58,137 @@ crossorigin="anonymous">
 <!-- BODY -->
 
 
-
-    <table class="table">
+<table class="table">
         
-        <thead>
-              <tr>
-                  <th scope="col">Start Time</th>
-                  <th scope="col">What are you accomplishing?</th>
-                  <th scope="col">Save Me!</th>
-              </tr>
-        </thead>
+    <thead>
+            <tr>
+                <th scope="col">Start Time</th>
+                <th scope="col">What are you accomplishing?</th>
+                <th scope="col">Save this task?1!</th>
+            </tr>
+    </thead>
 
-        <tbody>
 
-              <p>
+    <tbody>
+            
 
-                  <tr id="timeBlock1">
-                      <th scope="row" id="eightAm">8:00 AM</th>
+        
+        
+            <tr>
+                
 
-                      <td><input type ="text" class = "taskFont" id = "8"></td>
+                <th scope="row" id = "8">8:00 AM
+                </th>
 
-                      <td><input type="submit" value = 'Save'></td> 
+                <td id="8A"><div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="The first task of the day, start STRONG!" aria-label="Recipient's username" aria-describedby="button-addon2">
+                
+                  </div></td>
+
+                <td id="8B"><input id="firstSaveButton" type="submit" value = 'Save'></td> 
+
+
+                
+            </tr>
+
+                  <tr>
+                      <th scope="row" id = "9">9:00 AM</th>
+
+                      <td id = "9A"><div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Time to get your Rhythm!!" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                      </div></td>
+
+                      <td id = "9B"><input type="submit" value = 'Save'></td> 
                   </tr>
 
                   <tr>
-                      <th scope="row" id="nineAm">9:00 AM</th>
+                      <th id = "10" scope="row">10:00 AM</th>
 
-                      <td><input type ="text" class = "taskFont" id = "9"></td>
+                      <td id = "10A"><div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Heating Up!" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                      </div></td>
 
-                      <td><input type="submit" value = 'Save'></td> 
+                      <td id = "10B"> <input type="submit" value = 'Save'></td>
                   </tr>
 
-                  <tr>
-                      <th scope="row" id="tenAm">10:00 AM</th>
+                  <tr id = "11">
+                      <th scope="row">11:00 AM</th>
 
-                      <td><input type ="text" class = "taskFont" id = "10"></td>
+                      <td id = "11A"><div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="On Fire!" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                      </div></td>
 
-                      <td> <input type="submit" value = 'Save' id = "saveButton10"></td>
+                      <td id = "11B"> <input type="submit" value = 'Save'></td>
                   </tr>
 
-                  <tr>
-                      <th scope="row" id="elevenAm">11:00 AM</th>
+                  <tr >
+                      <th  id = "12" scope="row">12:00 PM</th>
 
-                      <td><input type ="text" class = "taskFont" id = "11"></td>
+                      <td  id = "12A"><div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Refuel or Keep Grinding?!" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                      </div></td>
 
-                      <td> <input type="submit" value = 'Save'></td>
+                      <td  id = "12B"> <input type="submit" value = 'Save'></td>
                   </tr>
+                  <tr id = "13">
+                      <th scope="row">1:00 PM</th>
 
-                  <tr>
-                      <th scope="row" id="twelvePm">12:00 PM</th>
+                      <td id = "13A"><div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Stay Awake" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                      </div></td>
 
-                      <td><input type ="text" class = "taskFont" id = "12"></td>
-
-                      <td> <input type="submit" value = 'Save'></td>
+                      <td id = "13B"> <input type="submit" value = 'Save'></td>
                   </tr>
-                  <tr>
-                      <th scope="row" id="onePm">1:00 PM</th>
+                  <tr id = "14">
+                      <th scope="row">2:00 PM</th>
 
-                      <td><input type ="text" class = "taskFont" id = "13"></td>
+                      <td id = "14A"><div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Push Through!" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                      </div></td>
 
-                      <td> <input type="submit" value = 'Save'></td>
-                  </tr>
-                  <tr>
-                      <th scope="row" id="twoPm">2:00 PM</th>
-
-                      <td><input type ="text" class = "taskFont" id = "14"></td>
-
-                      <td> <input type="submit" value = 'Save'></td>
-                  </tr>
-                  <tr>
-                      <th scope="row" id="threePm">3:00 PM</th>
-
-                      <td><input type ="text" class = "taskFont" id = "15"></td>
-
-                      <td> <input type="submit" value = 'Save'></td>
-                  </tr>
-                  <tr>
-                      <th scope="row" id="fourPm">4:00 PM</th>
-
-                      <td><input type ="text" class = "taskFont" id = "16"></td>
-
-                      <td> <input type="submit" value = 'Save'></td>
+                      <td id = "14B"> <input type="submit" value = 'Save'></td>
                   </tr>
                   <tr>
-                      <th scope="row" id="fivePm">5:00 PM</th>
+                      <th id = "15" scope="row" id="threePm">3:00 PM</th>
 
-                      <td><input type ="text" class = "taskFont" id = "17"></td>
+                      <td id = "15A"><div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Getting Closer!" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                      </div></td>
 
-                      <td> <input type="submit" value = 'Save'></td>
+                      <td id = "15B"> <input type="submit" value = 'Save'></td>
                   </tr>
-              </p>
+                  <tr>
+                      <th id = "16" scope="row" id="fourPm">4:00 PM</th>
+
+                      <td id = "16A"><div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Almost There!" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                      </div></td>
+
+                      <td id = "16B"> <input type="submit" value = 'Save'></td>
+                  </tr>
+                  <tr>
+                      <th id = "17" scope="row" >5:00 PM</th>
+
+                      <td id = "17A"><div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="It's how you FINISH that MATTERS!" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    
+                      </div></td>
+
+                      <td id = "17B"> <input type="submit" value = 'Save'></td>
+                  </tr>
+             
         
         </tbody>
       </table>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="./Assets/JS/script.js"></script>
   </body>
 </html>
